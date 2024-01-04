@@ -1,0 +1,8 @@
+How to add locomotive scroll to your site
+
+1. Step 1st - GO to this site https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/
+   step 2nd - copy the javascript and css file from it 
+              --paste above closing text of the body 
+              --<script src = "">
+              
+              css- file paste it the way you link your css file to in (link rel= "stylesheet", href = "")

@@ -119,18 +119,123 @@ nav {
 #page1 video {
     border-radius: 30px;
     margin-top: 5vw;
+    position: relative;
+    width: 100%;
 }
 
 #hero-shape {
     position: absolute;
     width: 36vw;
     height: 36vh;
-    background-color: #fE320A;
 
     right: 0;
     top: 65vh;
+
+
+
+}
+
+
+/* Hero shape only work for the wrapper */
+
+#hero1 {
+    height: 100%;
+    width: 100%;
+    background-color: #fE320A;
+    position: absolute;
+
     border-top-left-radius: 50%;
     border-bottom-left-radius: 50%;
     filter: blur(20px);
 
+}
+
+#hero2 {
+    height: 30vh;
+    width: 30vw;
+    background: linear-gradient(#fE320A, #cc3d20);
+    position: absolute;
+
+    border-radius: 50%;
+    filter: blur(20px);
+    animation-name: anime2;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+}
+
+#hero3 {
+    height: 30vh;
+    width: 30vw;
+
+    background: linear-gradient(#fE320A, #cc3d20);
+    border-radius: 50%;
+    filter: blur(20px);
+    position: absolute;
+    filter: blur(20px);
+    animation-name: anime1;
+    animation-duration: 5s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+
+
+}
+
+
+/* How to create the animation */
+
+@keyframes anime1 {
+    from {
+        transform: translate(55%, -3%);
+    }
+
+    to {
+        transform: translate(0%, 10%);
+    }
+}
+
+
+@keyframes anime2 {
+    from {
+        transform: translate(5%, -5%);
+    }
+
+    to {
+        transform: translate(-20%, 30%);
+    }
+}
+
+
+
+#page2 {
+    min-height: 100vh;
+    width: 100%;
+    background-color: #fff;
+}
+
+#moving-text {
+    white-space: nowrap;
+}
+
+#moving-text h1 {
+    font-size: 9vw;
+    background-color: #5c5959;
+    display: inline-block;
+}
+
+.con {
+    white-space: nowrap;
+    display: inline-block;
+}
+
+#gola {
+    width: 60px;
+    height: 60px;
+    background-color: #fE320A;
+    border-radius: 50%;
+    display: inline-block;
 }
