@@ -215,21 +215,36 @@ nav {
     min-height: 100vh;
     width: 100%;
     background-color: #fff;
+    padding: 8vw 0;
+    position: relative;
 }
 
 #moving-text {
     white-space: nowrap;
+    overflow-x: auto;
+
+
+
 }
+
+#moving-text::-webkit-scrollbar {
+    display: none;
+}
+
 
 #moving-text h1 {
     font-size: 9vw;
-    background-color: #5c5959;
+
     display: inline-block;
 }
 
 .con {
     white-space: nowrap;
     display: inline-block;
+    animation-name: move;
+    animation-duration: 10s;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
 }
 
 #gola {
@@ -238,4 +253,126 @@ nav {
     background-color: #fE320A;
     border-radius: 50%;
     display: inline-block;
+    margin: 1vw 2vw;
+}
+
+@keyframes move {
+
+    from {
+        transform: translateX(0);
+    }
+
+    to {
+        transform: translateX(-100%);
+    }
+}
+
+
+#page2-bottom {
+
+    height: 80vh;
+    width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4.5vw;
+    position: relative;
+    z-index: 1;
+
+}
+
+#page2-bottom h1 {
+    font-size: 4vw;
+    width: 60%;
+    line-height: 4vw;
+}
+
+#bottom-part2 {
+    width: 20%;
+
+
+}
+
+#bottom-part2 img {
+    width: 100%;
+    border-radius: 15px;
+}
+
+#bottom-part2 p {
+    font-weight: 100;
+    margin-top: 2vw;
+    text-align: center;
+
+}
+
+
+#page2 #gooey {
+    height: 32vw;
+    width: 32vw;
+    position: absolute;
+    border-radius: 50%;
+    background: linear-gradient(to top right, #fE320A, #ff9913);
+    top: 58%;
+    left: 25%;
+    filter: blur(30px);
+    animation-name: gooey;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 4s;
+}
+
+#page3 {
+
+    height: 100vh;
+    width: 100%;
+
+
+
+
+
+}
+
+@keyframes gooey {
+    from {
+        transform: translate(10%, -10%) skew(0);
+    }
+
+    to {
+        transform: translate(-10%, 10%) skew(-12deg);
+    }
+}
+
+
+.elem {
+    height: 150px;
+    width: 100%;
+    position: relative;
+    /* background-color: red; */
+    display: flex;
+    align-items: center;
+    padding: 0 2vw;
+    border-top: 1px solid black;
+    border-bottom: 1px solid black;
+    overflow: hidden;
+}
+
+.elem h2 {
+    font-size: 3vw;
+    position: relative;
+    z-index: 9;
+}
+
+.overlay {
+    height: 100%;
+    width: 100%;
+    background-color: orange;
+    position: absolute;
+    left: 0;
+    top: -100%;
+    transition: ease-in 0.3s;
+}
+
+.elem:hover .overlay {
+    top: 0;
 }
